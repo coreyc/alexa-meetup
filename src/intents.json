@@ -1,0 +1,19 @@
+{
+  "intents": [
+    {
+      "intent": "",
+      "slots": [
+        {
+          "name": "Keyword",
+          "type": "LIST_OF_KEYWORDS"
+        }
+      ]
+    },
+    {
+      "intent": ""
+  },
+  {
+      "intent": "HearTheRestOfThisConversation"
+  }
+  ]
+}
