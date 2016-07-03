@@ -7,13 +7,24 @@ const meetup = require('meetup-api')({
     }
 });
 
-meetup.getOpenEvents({
-    city: 'Hartford',
-    state: 'CT',
-    country: 'US',
-    topic: 'sports',
-    desc: true
-}, (err, events) => {
-    if (err) console.log(err);
-    else console.log(events);
-});
+const getOpenEvents = (city, state, country, topic, desc) => {
+    meetup.getOpenEvents({
+        city: city,
+        state: state,
+        country: country || 'US',
+        topic: topic || null,
+        desc: desc || null
+    }, (err, events) => {
+        if (err) console.log(err);
+        else console.log(events.results.map((event) => {
+            return {
+                event: event.name,
+                date: new Date(event.time).toString(),
+                venue: event.venue.name,
+                location: event.venue.city
+            }
+        }));
+    });
+}
+
+module.exports = getOpenEvents;
