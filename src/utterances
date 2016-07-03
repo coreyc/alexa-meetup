@@ -1,0 +1,8 @@
+EventIntent What events are going on in {city}, {state}
+EventIntent Tell me the {topic} events going on in {city}, {state}
+EventIntent Search for {topic} events in {city}, {state}
+
+AMAZON.HelpIntent help
+AMAZON.HelpIntent help me
+AMAZON.StopIntent stop
+AMAZON.CancelIntent cancel

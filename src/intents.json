@@ -1,19 +1,21 @@
 {
-  "intents": [
-    {
-      "intent": "",
-      "slots": [
-        {
-          "name": "Keyword",
-          "type": "LIST_OF_KEYWORDS"
-        }
-      ]
-    },
-    {
-      "intent": ""
-  },
-  {
-      "intent": "HearTheRestOfThisConversation"
-  }
-  ]
+    "intents": [{
+        "intent": "EventsIntent",
+        "slots": [{
+            "name": "city",
+            "type": "AMAZON.US_CITY"
+        }, {
+            "name": "topic",
+            "type": "AMAZON.LITERAL"
+        }, {
+            "name": "state",
+            "type": "AMAZON.US_STATE"
+        }, {
+            "intent": "AMAZON.HelpIntent"
+        }, {
+            "intent": "AMAZON.StopIntent"
+        }, {
+            "intent": "AMAZON.CancelIntent"
+        }]
+    }]
 }
