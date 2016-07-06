@@ -2,7 +2,8 @@
   "name": "alexa-meetup",
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "start": "node src/alexa.js"
   },
   "devDependencies": {
 
